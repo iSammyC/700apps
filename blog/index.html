@@ -1,13 +1,60 @@
 ---
 layout: default
 ---
+<main class="px4" style="width:90%; max-width:700px;">
+    
+
+    <div class="pop-up">
+
+  
+    <div id="what" class="popup-dic mfp-hide">
+        <h1>What is this?</h1> 
+        <p>"The best is yet to come" 是林一峰的一首歌名。我更喜欢 AT17的版本。我比较不喜欢林一峰这个人。</p>
+
+        <p>这个网站跟那首歌没有半毛钱关系。</p>
+
+        <p>这其实就是我瞎折腾弄出来的一个博客。</p>
+        
+        <p>用来记录一些好玩有趣脑洞开的新发现。顺便，你也可以随时来瞧瞧。</p>
+    </div>
+
+    <div id="who" class="popup-dic mfp-hide">
+        <h1>Who make this ?</h1>
+        <p>Sammy。28。 男。 一个身在北京的广州人。</p>
+        <p>有兴趣的话，可以去我的<a href="http://sammyc.tk">主站</a>看看. 顺便一提，那边“精美“很多。</p>
+    </div>
+
+    <div id="why" class="popup-dic mfp-hide">
+        <h1>Why I make this ?</h1>
+        <p>我也不知道。真的。</p>
+        <p>我想写些稍微长一点内容放到<a href="http://sammyc.tk/blog">博客</a>上, 但是又有很多一两句就能说完的话。这两个东西我不知道怎么混到一个页面上去让它没那么奇怪。但是我最后没找到解决方案。</p>
+        <p>对对对，我可以发微博，可以发 Twitter，也可以发朋友圈。</p>
+        <p>我也不是原始人，当然这些我也发。可是我就想自己能控制这些内容的容器是长什么样的。显然，新浪和腾讯一类的不会允许我这么做。</p>
+        <p>大概是因为这样吧，就弄了这个东西出来。</p>
+
+    </div>
+
+    <div id="how" class="popup-dic mfp-hide">
+        <h1>How often will it update ?</h1>
+        <p>有空就发。但要是有空但是那几天真没挖到什么新玩意我也不会勉强自己去发，毕竟这里又不是微信公众号一类的要博眼球抢收视的。</p>
+        <p>也有可能我觉得没人看，发着发着也不发了。</p>
+        <p>病了的时候可能不发。我突然很自私不想告诉其他人这些好玩的我也不发。</p>
+        <p>我自己也不知道在这傲娇个啥的，其实就是随便啦。要是你不小心路过看到了又觉得这个某些特质，无论是逼格还是装修还是语言风格，刚好和你搭得来，我还是一个很 nice 的人来的，真心欢迎你。但要是你不想老点开网站看有没有更新那么不 cool，其实可以点右上角 RSS 那里订阅的。（要是将来真有人看，将来弄个邮件订阅也是可以的。再说吧。）</p>
+    </div>
+
+    </div>
+
+
+ 
+
+
 
 <div class="home">
   <ul class="list-reset">
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
+      
     </li>
   {% endfor %}
 </ul>
@@ -15,3 +62,4 @@ layout: default
 
 </div>
 
+</main>
