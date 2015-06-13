@@ -3,43 +3,24 @@
 
   {% include head.html %}
 
-  <body class="bg-instapaper-dark" >
+  <body>
   <div class="flex flex-column" style="min-height:100vh">
-
-  
-
-   
-
-    
-    
-    
-
     <div class="flex-auto mx-auto" style="width:90%;max-width:700px;">
-    
-
-
-    <div class="flex-auto">
-      <div class="wrapper">
+      <div class="flex-auto">
+        <div class="wrapper">
         {{ content }}
+        </div>
       </div>
-      </div>
-
     </div>
-    </div>
-    
-
-    
-  
   </div>
 
-  
 
+{% include footer.html %}
 
-  <script type="text/javascript">
-$('.open-popup-link').magnificPopup({
-  type:'inline',
-  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-});
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
   </script>
   </body>
 
