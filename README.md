@@ -1,6 +1,6 @@
 # 9con
 
-### A icon set for OS X.
+### An icon set for OS X.
 
 Inspired by [Glacier](https://glaciericons.com/) icons. 
 
