@@ -4,9 +4,25 @@
  * Basscss theme
  *
  */
-@font-face { font-family: 'SanFranciscoDisplay-Thin'; src: url('/css/webfont/SanFranciscoDisplay-Thin.eot?#iefix') format('embedded-opentype'), url('/css/webfont/SanFranciscoDisplay-Thin.otf') format('opentype'), url('/css/webfont/SanFranciscoDisplay-Thin.woff') format('woff'), url('/css/webfont/SanFranciscoDisplay-Thin.ttf') format('truetype'), url('/css/webfont/SanFranciscoDisplay-Thin.svg#SanFranciscoDisplay-Thin') format('svg'); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'SanFranciscoDisplay-Semibold'; src: url('/css/webfont/SanFranciscoDisplay-Semibold.eot?#iefix') format('embedded-opentype'), url('/css/webfont/SanFranciscoDisplay-Semibold.otf') format('opentype'), url('/css/webfont/SanFranciscoDisplay-Semibold.woff') format('woff'), url('/css/webfont/SanFranciscoDisplay-Semibold.ttf') format('truetype'), url('/css/webfont/SanFranciscoDisplay-Semibold.svg#SanFranciscoDisplay-Semibold') format('svg'); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'SanFranciscoDisplay-Regular'; src: url('/css/webfont/SanFranciscoDisplay-Regular.eot?#iefix') format('embedded-opentype'), url('/css/webfont/SanFranciscoDisplay-Regular.otf') format('opentype'), url('/css/webfont/SanFranciscoDisplay-Regular.woff') format('woff'), url('/css/webfont/SanFranciscoDisplay-Regular.ttf') format('truetype'), url('/css/webfont/SanFranciscoDisplay-Regular.svg#SanFranciscoDisplay-Regular') format('svg'); font-weight: normal; font-style: normal; }
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);
+
+@font-face {font-family: 'webfont';
+  src: url('//at.alicdn.com/t/rjq55ohppmk7qfr.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/rjq55ohppmk7qfr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/rjq55ohppmk7qfr.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/rjq55ohppmk7qfr.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/rjq55ohppmk7qfr.svg#思源黑体-细') format('svg'); /* iOS 4.1- */
+}
+
+
+
+.web-font{
+    font-family:"webfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 
 #month {
@@ -192,16 +208,26 @@ td { vertical-align: top }
 
 
 body {
-  font-family: 'SanFranciscoDisplay-Regular','SanFranciscoDisplay-Thin', Helvetica, sans-serif;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-weight: 300;
   line-height: 2em;
   font-size: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'SanFranciscoDisplay-Semibold', 'SanFranciscoDisplay-Regular'Georgia, serif;
+  font-family: 'Fira Sans', Georgia, serif;
+  font-weight: 700;
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: .5em;
+}
+
+h1.web-font,
+h2.web-font,
+h3.web-font,
+h4.web-font,
+h5.web-font {
+  font-weight: normal;
 }
 
 p, dl, ol, ul {
@@ -214,7 +240,7 @@ p, dl, ol, ul {
 }
 
 pre, code, samp {
-  font-family: 'SanFranciscoDisplay-Thin', Consolas, monospace;
+  font-family: 'Roboto Condensed', Consolas, monospace;
   font-size: inherit;
   
 }
@@ -289,10 +315,11 @@ h6, .h6 { font-size: 14px; font-size: .875rem }
 .full-width { width: 100% }
 /* Basscss Utility Typography */
 
-.bold    { font-weight: bold; font-weight: bold }
-.regular { font-weight: normal }
+.bold    { font-weight: 700; }
+.regular { font-weight: 400; }
+.thin    { font-weight: 300; } 
 .italic  { font-style: italic }
-.caps    { text-transform: uppercase; letter-spacing: .2em; }
+.caps    { text-transform: uppercase; }
 
 .left-align   { text-align: left }
 .center       { text-align: center }
@@ -457,7 +484,7 @@ h6, .h6 { font-size: 14px; font-size: .875rem }
 /* Basscss Grid */
 
 .container {
-  max-width: 64em;
+  max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -750,7 +777,7 @@ body {
 
 
 a {
-  color: #D0D0D0;
+  color: #DF574B;
   text-decoration: none;
 }
 
@@ -1342,8 +1369,8 @@ canvas {
 /* Styles for dialog window */
 .popup-dic {
   position: relative;
-  background: #3C3C3C;
-  color: #A0A0A0;
+  background: #F4F4F4;
+  color: #3D3D3D;
   padding: 20px;
   width:auto;
   max-width: 400px;
@@ -1352,7 +1379,6 @@ canvas {
 
 .popup-dic h1 {
   font-size: 2.2em;
-  color: #D0D0D0 ;
   font-weight: 500;
   display: inline-block;
   margin-right: 2em;
@@ -1383,7 +1409,304 @@ img.hvr-nine:hover {
   transition-duration: .8s;
 }
 
-.sf-regular {font-family: 'SanFranciscoDisplay-Regular'}
-.sf-thin { font-family: 'SanFranciscoDisplay-Thin';}
-.sf-semibold { font-family: 'SanFranciscoDisplay-Semibold'}
 
+
+
+.social-bar li {
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+.social-bar li svg {
+  background: white;
+  transition: background 0.4s ease-out;
+}
+
+
+
+
+
+a.facebook svg {
+  fill: #3B5998;
+}
+
+a.facebook svg:hover {
+  fill: #fff;
+  background-color: #3B5998;
+}
+
+a.twitter svg {
+  fill: #55ACEE;
+}
+
+a.twitter svg:hover {
+  fill: #fff;
+  background-color: #55ACEE;
+}
+
+a.douban svg {
+  fill: #2E963D;
+}
+
+a.douban svg:hover {
+  fill: #fff;
+  background-color: #2E963D;
+}
+
+
+
+a.wechat svg {
+  fill: #7ED321;
+}
+
+a.wechat svg:hover {
+  fill: #fff;
+  background-color: #7ED321;
+}
+
+
+a.weibo svg {
+  fill: #E6162D;
+}
+
+
+a.weibo svg:hover {
+  fill: #fff;
+  background-color: #E6162D;
+}
+
+#dock {
+  background-image: url(background-image: url(http://7xixe7.com1.z0.glb.clouddn.com/15-6-14/7389135.jpg);
+    background-repeat: repeat-x;
+}
+
+
+#dock {
+  
+  -webkit-animation: separator 60s linear infinite;
+  animation: separator 60s linear infinite;
+  background: url(img/separator.png) repeat-x;
+  background-size: 135.2rem 5.9rem!important;
+  height: 5.9rem;
+  margin-top: 9rem;
+  width: 100%;
+}
+
+/* HOVER STUFF */
+/* Hang */
+@-webkit-keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  50% {hang
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+
+  100% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+}
+
+@keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  50% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+
+  100% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+}
+
+@-webkit-keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+}
+
+@keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+}
+
+.hvr-hang, {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active, img.logo, .hanging {
+  -webkit-animation-name: hvr-hang-sink, hvr-hang;
+  animation-name: hvr-hang-sink, hvr-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+.hvr-shadow {
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.hvr-shadow:hover, .hvr-shadow:focus, .hvr-shadow:active {
+-webkit-box-shadow:inset 0px 0px 2px 2px rgba(0,0,0,0.08);
+-moz-box-shadow:inset 0px 0px 2px 2px rgba(0,0,0,0.08);
+box-shadow:inset 0px 0px 2px 2px rgba(0,0,0,0.08);
+}
+
+
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+
+
+.l9 {
+  transform: rotate(9deg);
+}
+
+
+
+
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+      
+      .mfp-close-btn-in .mfp-close {
+         color: inherit;
+      }
+
+
+      .mfp-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.85);
+  opacity: 0.8;}
+
+
+  section h3 {
+    font-size: 22px;
+  }
+
+
+  section p {
+    font-size: 14px;
+  }

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: HomeCN
 title: About
 permalink: /about/
 ---
