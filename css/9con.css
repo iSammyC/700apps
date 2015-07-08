@@ -14,7 +14,12 @@
   url('//at.alicdn.com/t/rjq55ohppmk7qfr.svg#思源黑体-细') format('svg'); /* iOS 4.1- */
 }
 
-
+  header {
+    width: 100%;
+    /* background-image: url(http://7xixe7.com1.z0.glb.clouddn.com/15-6-13/126530.jpg); 
+    background-size: cover;
+    background-position: center;*/
+  }
 
 .web-font{
     font-family:"webfont" !important;
@@ -208,14 +213,14 @@ td { vertical-align: top }
 
 
 body {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: 'SanFranciscoDisplay-thin', Helvetica, sans-serif;
+  
   line-height: 2em;
   font-size: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fira Sans', Georgia, serif;
+  font-family: 'SanFranciscoDisplay-SemiBold', Georgia, serif;
   font-weight: 700;
   line-height: 1.25;
   margin-top: 1em;
@@ -289,6 +294,12 @@ h6, .h6 { font-size: 14px; font-size: .875rem }
   padding-left: 0;
 }
 
+ul.list-reset li {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* Basscss Utility Layout */
 
 .inline       { display: inline }
@@ -315,7 +326,7 @@ h6, .h6 { font-size: 14px; font-size: .875rem }
 .full-width { width: 100% }
 /* Basscss Utility Typography */
 
-.bold    { font-weight: 700; }
+.bold    { font-family: 'SanFranciscoDisplay-SemiBold'}
 .regular { font-weight: 400; }
 .thin    { font-weight: 300; } 
 .italic  { font-style: italic }
@@ -1145,13 +1156,13 @@ input[type=range] {
   border-left-color: inherit;
 }
 
-.rounded { border-radius: 3px }
+.rounded { border-radius: 6px }
 .circle  { border-radius: 50% }
 
-.rounded-top    { border-radius: 3px 3px 0 0 }
-.rounded-right  { border-radius: 0 3px 3px 0 }
-.rounded-bottom { border-radius: 0 0 3px 3px }
-.rounded-left   { border-radius: 3px 0 0 3px }
+.rounded-top    { border-radius: 6px 6px 0 0 }
+.rounded-right  { border-radius: 0 6px 6px 0 }
+.rounded-bottom { border-radius: 0 0 6px 6px }
+.rounded-left   { border-radius: 6px 0 0 6px }
 
 .not-rounded { border-radius: 0 }
 /* Basscss Colors */
@@ -1212,8 +1223,11 @@ input[type=range] {
 .bg-darken-2 { background-color: rgba(0,0,0,.125) }
 .bg-darken-3 { background-color: rgba(0,0,0,.25) }
 .bg-darken-4 { background-color: rgba(0,0,0,.5) }
+.bg-darken-5 { background-color: rgba(0,0,0,.8); }
 
-
+.fs18 { font-size: 18px }
+.fs17 { font-size: 17px }
+.fs16 { font-size: 16px; }
 /* Border Color */
 
 .border-aqua  { border-color: #7fdbff }
@@ -1288,6 +1302,17 @@ input[type=range] {
 .field-light:focus {
   border-color: inherit;
   box-shadow: none;
+}
+
+body {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,3d3d3d+100 */
+background: rgb(125,126,125); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(61,61,61,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(61,61,61,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(61,61,61,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(61,61,61,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(61,61,61,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(61,61,61,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#3d3d3d',GradientType=0 ); /* IE6-9 */
 }
 
 /*
@@ -1475,22 +1500,19 @@ a.weibo svg:hover {
   background-color: #E6162D;
 }
 
-#dock {
-  background-image: url(background-image: url(http://7xixe7.com1.z0.glb.clouddn.com/15-6-14/7389135.jpg);
-    background-repeat: repeat-x;
+#dock, #menubar, #iconimg {
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-iteration-count: 1;
+}
+
+#iconimglist, #highlight {
+-webkit-animation-duration: 1s;
+  -webkit-animation-delay: 10s;
+  -webkit-animation-iteration-count: 1;
 }
 
 
-#dock {
-  
-  -webkit-animation: separator 60s linear infinite;
-  animation: separator 60s linear infinite;
-  background: url(img/separator.png) repeat-x;
-  background-size: 135.2rem 5.9rem!important;
-  height: 5.9rem;
-  margin-top: 9rem;
-  width: 100%;
-}
 
 /* HOVER STUFF */
 /* Hang */
@@ -1710,3 +1732,10 @@ a.control_next {
   section p {
     font-size: 14px;
   }
+
+
+
+
+
+
+
